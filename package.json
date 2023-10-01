@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "fastapi-dev": "pip3 install -r requirements.txt && python3 -m uvicorn api.index:app --reload",
+    "fastapi-dev": "pip install -r requirements.txt && python -m uvicorn api.index:app --reload",
     "next-dev": "next dev",
-    "dev": "concurrently \"npm run next-dev\" \"npm run fastapi-dev\"",
+    "dev": "concurrently \"pnpm next-dev\" \"pnpm fastapi-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -18,6 +18,7 @@
     "concurrently": "^8.0.1",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.4",
+    "fastapi": "^0.0.8",
     "next": "13.4.4",
     "postcss": "8.4.23",
     "react": "18.2.0",
